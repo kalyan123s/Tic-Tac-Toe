@@ -9,7 +9,7 @@ let gameGrid;
 // Create an array to hold the Audio objects
 const audioArray = [];
 // Load each audio file into the array
-for (let i = 1; i <= 8; i++) {
+for (let i = 1; i <= 9; i++) {
     const audio = new Audio(`./audio/audio${i}.mp3`);
     audioArray.push(audio);
 }
