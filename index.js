@@ -16,7 +16,7 @@ const winnningPositions=[
     [2,4,6]
 ]
 
-// now we will create function to initia;ize the game
+// now we will create function to initialize the game
 function initializeGame(){
     currentPlayer="X";
     gameGrid=["","","","","","","","",""];
@@ -82,6 +82,10 @@ function checkGameOver(){
 
     if (answer!=="") {
         gameInfo.innerText= `Winner is ${answer} 🎉🎉`;
+        // if someone wins then make all boxes unclickable
+        boxes.forEach((box) => {
+            box.style.pointerEvents="none";
+        });
         return;
     }
 
