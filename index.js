@@ -5,6 +5,15 @@ const newGameBtn=document.querySelector(".btn");
 let currentPlayer;
 let gameGrid;
 
+
+// Create an array to hold the Audio objects
+const audioArray = [];
+// Load each audio file into the array
+for (let i = 1; i <= 8; i++) {
+    const audio = new Audio(`./audio/audio${i}.mp3`);
+    audioArray.push(audio);
+}
+
 const winnningPositions=[
     [0,1,2],
     [3,4,5],
@@ -44,6 +53,7 @@ function swapTurn(){
     }
     gameInfo.innerText=`Current Player - ${currentPlayer}`;
 }
+
 function handleClick(index){
     if (gameGrid[index]==="") {
         boxes[index].innerText=currentPlayer;
@@ -57,6 +67,7 @@ function handleClick(index){
         // check for game over
         checkGameOver();
     }
+    audioArray[index].play();
 }
 
 function checkGameOver(){

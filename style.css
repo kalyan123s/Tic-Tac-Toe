@@ -225,6 +225,7 @@ body{
   .header {
       font-size: 3vw;
       width: 40%;
-      padding: 20px 30px;
+      padding:  15px 40px ;
+      border-radius: 20px;
   }
 }
